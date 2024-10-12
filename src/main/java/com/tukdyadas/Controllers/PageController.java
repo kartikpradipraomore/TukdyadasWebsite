@@ -14,27 +14,35 @@ public class PageController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
         return "home";
     }
 
-
-
-
-
-
-    @PostMapping("/addUser")
-    public String addUser() {
-        try{
-
-            userService.addUser(new User());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return "redirect:/home";
+    @GetMapping("/gramgita")
+    public String gramgita() {
+        return "gramgita";
     }
+
+    @GetMapping("/bhajan")
+    public String bhajan() {
+        return "bhajan";
+    }
+
+    @GetMapping("/sahitya")
+    public String sahitya() {
+        return "sahitya";
+    }
+
+    @GetMapping("/galary")
+    public String galary() {
+        return "galary";
+    }
+
+    @GetMapping("/hamare")
+    public String hamare() {
+        return "hamare";
+    }
+
 
 }

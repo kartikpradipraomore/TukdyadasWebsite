@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi"
+      th:replace="~{base :: parent(~{::#content},~{::title})}"
+
+>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>तुकड्यादास</title>
 </head>
 <body>
+<main id="content" >
+    <div class="flex p-5">
+        <aside class="w-1/4 bg-gray-100 p-5 mr-5 rounded-lg overflow-y-scroll max-h-[500px]">
+            <h2 class="text-xl mb-4">साहित्य सूची</h2>
+            <ul class="list-none">
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">ग्रामगीता</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">भजन</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">सुविचार स्मरणी</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">श्लोक (मराठी)</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">श्लोक ( हिंदी )</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">राष्ट्रसंतांची भाषणे</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">युगप्रभात</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">सुधा सिंधू की लहरे १</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">सुविचार स्मरणी भाग २</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">राष्ट्रसंतांची प्रवचने</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">मेरी जपान यात्रा</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">विश्वशांतियोग</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">मेरी जीवन यात्रा</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">आनंदामृत</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">आत्मप्रभाव</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">सुविचार स्मरणी भाग ३</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">सुधा सिंधू की लहरे २</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">हितबोध</a></li>
+                <li class="mb-2"><a href="#" class="text-[#af7421] no-underline">सद् विचार प्रवाह</a></li>
+            </ul>
+        </aside>
 
-       <h1>home</h1>
+        <section class="w-1/2 bg-white p-5 mr-5 text-center rounded-lg">
+            <h2 class="text-xl mb-4">दैनिक पोस्ट</h2>
+            <img src="daily-photo.jpg" alt="दैनिक पोस्ट फोटो" class="rounded-lg w-full h-auto">
+            <div class="mt-4 text-lg text-gray-600">यह एक दैनिक पोस्ट का कैप्शन है।</div>
+            <a href="#" class="mt-3 inline-block py-2 px-4 bg-[#af7421] text-white no-underline rounded-lg mb-5">पूरा ब्लॉग पढ़ें</a>
+        </section>
+
+        <aside class="w-1/4 bg-gray-100 p-5 ml-5 rounded-lg overflow-y-scroll max-h-[500px]">
+            <h2 class="text-xl mb-4">सामुदायिक प्रार्थना</h2>
+            <ul class="list-none">
+                <li><a href="#" class="text-[#af7421] no-underline">
+                    है प्रार्थना गुरुदेव से ,यह स्वर्गसम संसार हो । अति उच्चतम जीवन बने, परमार्थमय व्यवहार हो ॥ ना हम रहे अपने लिये, हमको सभी से गर्ज है । गुरुदेव ! यह आशीष दे ,जो सोचने का फर्ज है ॥ १॥ हम हो पुजरी तत्व के , गुरुदेव के आदेश के । सच प्रेम के , नीत नेम के , सध्दर्म के ॥ हो चीड झुठी राह कि अन्याय कि अभीमान की। सेवा करनने को दास की ,पर्वा नही हो के जान की ॥२॥ छोटे न हो हम बुध्दी से , हो विश्वमयसे ईशमय। हो राममय अरु कृष्णमय , जगदेवमय जगदीशमय ॥ हर इंद्रियों ताब कर , हम वीर हो अति धीर हो । उज्ज्वल रहे सरसे सदा , निहधर्मरत खंबीर हो ॥ ३॥ यह डर सभी जाता रहे ,मन बुध्दीका इस देहका । निर्भय रहे हम कर्ममें, परदा खुलाकरे स्नेहका ॥ गाते रहे प्रभुनाम पर , प्रभु तत्व पने के लिये। हो ब्रह्मविद्द्या का उदय , यह जी तराने के लिये ॥४॥
+                </a></li>
+            </ul>
+        </aside>
+    </div>
+
+</main>
 
 </body>
 </html>

@@ -14,11 +14,8 @@ public class UserServiceImple implements UserService {
 
     @Override
     public void addUser(User user) {
-
         try{
-
           userDao.save(user);
-
         }catch (Exception e){
             e.printStackTrace();
         }
