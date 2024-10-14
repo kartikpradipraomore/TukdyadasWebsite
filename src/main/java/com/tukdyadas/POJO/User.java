@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+import org.springframework.security.core.userdetails.UserDetails;
+
 
 @Entity
 @AllArgsConstructor
@@ -16,26 +18,28 @@ import lombok.*;
 @Setter
 @ToString
 @Builder
-public class User {
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @NotBlank(message = "First Name Required")
     private String firstName;
 
-    @NotBlank(message = "Last Name Required")
     private String lastName;
 
-    @Email(message = "Email Address Required")
-    private String email;
-
-    @NotBlank(message = "Phone Number Required")
     private String phNumber;
+
+    @NotBlank(message = "First Name Required")
+    private String email;
 
     @NotBlank(message = "Password Required")
     private String password;
+
+
+    //===================================================================================================================================================================
+
+
 
 
 }

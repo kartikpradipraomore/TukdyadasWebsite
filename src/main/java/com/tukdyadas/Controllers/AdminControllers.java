@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @Controller
-@RequestMapping("/tukdyadas/admin")
+@RequestMapping("/admin")
 public class AdminControllers {
 
     @Autowired
@@ -35,7 +35,7 @@ public class AdminControllers {
     public String addUser(@Valid @ModelAttribute("user") User user, Model model, BindingResult bindingResult, HttpSession session) {
 
         if(bindingResult.hasErrors()) {
-            return "admin/signup";
+            return "/signup";
         }
 
         try{
@@ -49,7 +49,27 @@ public class AdminControllers {
         Message message = Message.builder().content("Registration Successful").type(MessageType.green).build();
         session.setAttribute("message", message);
 
-        return "redirect:/tukdyadas/admin/signup";
+        return "redirect:/signup";
+
+    }
+
+    @GetMapping("/dashboard")
+    public String dashboard(Model model) {
+        return "/admin/dashboard";
+    }
+
+
+    @PostMapping("/authenticate")
+    public String authenticate(@Valid @ModelAttribute("user") User user, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return "/login";
+        }
+
+        log.info(user.toString());
+
+
+        log.info("================================================================================================");
+        return "redirect:/admin/signup";
 
     }
 
@@ -69,11 +89,20 @@ public class AdminControllers {
 
 
 
-    @GetMapping("/login")
-    public String login(Model model) {
-        model.addAttribute("user", new User());
-        return "admin/login";
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
